@@ -1,5 +1,7 @@
+import EditPost from "@/components/EditPost";
 import AddPost from "@/components/AddPost";
 import { sql } from "@vercel/postgres";
+import Link from "next/link";
 
 export default async function Home() {
 
@@ -11,8 +13,7 @@ export default async function Home() {
      <div><h2>post</h2>
         <ul>
         {posts.rows.map((post) => (
-          <li key={post.id}>
-            {post.text}
+          <li key={post.id}> <Link href="/${post.id}">{post.text}</Link>
           </li>
         ))}
       </ul>
@@ -39,6 +40,7 @@ export default async function Home() {
       </div>
     </main>
     <AddPost />
+    <EditPost />
   </div>
   );
 }
