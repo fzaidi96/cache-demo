@@ -18,7 +18,6 @@ export default async function EditPost ({postId}) {
     return (
          <div>
             <form action={handleEditPost}>
-                {/* somehow need to figure out how a user can pick a post and edit it ON HOME PAGE */}
                 <textarea name="text" placeholder="edit text here"></textarea>
                 <button type="submit">Save Changes</button>
             </form>

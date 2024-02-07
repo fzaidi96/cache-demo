@@ -2,7 +2,6 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  border-radius: 10px;
 }
 
 ul {
@@ -30,4 +29,3 @@ form {
   padding:1rem;
   gap:1rem;
 }
-

@@ -3,7 +3,7 @@ import AddPost from "@/components/AddPost";
 import { sql } from "@vercel/postgres";
 import Link from "next/link";
 
-export default async function Home() {
+export default async function Home({searchParams}) {
 
   const posts = await sql`SELECT * FROM postz`
 
@@ -13,7 +13,8 @@ export default async function Home() {
      <div><h2>post</h2>
         <ul>
         {posts.rows.map((post) => (
-          <li key={post.id}> <Link href="/${post.id}">{post.text}</Link>
+          <li key={post.id}>
+          <Link href={`/${post.id}`}>{post.text}</Link>
           </li>
         ))}
       </ul>

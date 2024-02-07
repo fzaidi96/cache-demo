@@ -10,7 +10,7 @@ export default function EditPage({params}) {
         <main>
         <h2>Edit Post</h2>
         </main>
-    <EditPost />
+    <EditPost postId={postId} />
     </div>
     )
 }
