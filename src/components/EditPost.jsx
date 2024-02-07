@@ -24,5 +24,3 @@ export default async function EditPost ({postId}) {
         </div>
             
     )}
-
-// this isn't functioning yet
