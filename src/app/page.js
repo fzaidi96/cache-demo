@@ -40,7 +40,6 @@ export default async function Home({searchParams}) {
       </ul>
       </div>
     </main>
-    <AddPost />
   </div>
   );
 }
