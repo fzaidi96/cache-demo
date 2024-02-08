@@ -9,7 +9,6 @@ export default async function Home({searchParams}) {
 
   return (
   <div>
-    <h1>A static website displaying a list of posts and when they were made</h1>
     <main>
      <div><h2>post</h2>
         <ul>
@@ -30,9 +29,17 @@ export default async function Home({searchParams}) {
         ))}
       </ul>
       </div>
-    </main>
 
-    <Link href={`/updated`}><button>click here</button></Link>
+      <div><h2>updated at</h2>
+        <ul>
+        {posts.rows.map((post) => (
+          <li key={post.id}>
+            {post.updated_at.toLocaleString()}
+          </li>
+        ))}
+      </ul>
+      </div>
+    </main>
   </div>
   );
 }
