@@ -12,7 +12,7 @@ export default async function EditPost ({postId}) {
         await sql`UPDATE postz SET text = ${text}, updated_at = ${updatedAt} WHERE id =${postId}` 
 
         revalidatePath("/updated");
-        redirect("/");
+        redirect("/updated");
       }
 
     return (
